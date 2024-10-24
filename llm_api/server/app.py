@@ -29,15 +29,15 @@ async def healthcheck_handler():
 
 class GetAnswerInput(BaseModel):
     question: str
+    model: Optional[str] = None
     kb_id: Union[str, List[str]]
     thread_id: Optional[str] = None
-    model_name: Optional[str] = None
     get_vs_used_files: Optional[bool] = False
 
 
 @app.post("/get_answer")
 def get_answer(answer_input: GetAnswerInput, request: Request):
-    model = 'gpt-4o'
+    model = 'gpt-4o-mini'
     headers = request.headers
 
     kb_ids = answer_input.kb_id if isinstance(answer_input.kb_id, list) else [answer_input.kb_id]
@@ -63,7 +63,6 @@ def get_answer(answer_input: GetAnswerInput, request: Request):
 
 
 class InsertKBInput(BaseModel):
-    drive_folder_id: str
     kb_id: str
 
 
@@ -72,7 +71,7 @@ def insert_kb(insert_kb_input: InsertKBInput, request: Request):
     setup_llama_index()
 
     # Make sure credentials.json file exists in the current directory (data_connectors)
-    reader = GlobalReader(folder_id=insert_kb_input.drive_folder_id)
+    reader = GlobalReader()
     # getting documents
     llama_index_documents = reader.parse()
 

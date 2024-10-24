@@ -1,0 +1,21 @@
+services:
+    api:
+        container_name: llm-research
+        build:
+            context: .
+        ports:
+            - 8099:8099
+        environment:
+            - REDIS_HOST=redis
+            - REDIS_PORT=${REDIS_PORT}
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+            - OPENAI_API_KEY=${OPENAI_API_KEY}
+        depends_on:
+            - redis
+
+    # https://hub.docker.com/r/redis/redis-stack
+    redis:
+        container_name: llm-research-vecdb
+        image: redis/redis-stack:6.2.6-v17
+        ports:
+            - 6379:6379

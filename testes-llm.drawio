@@ -1,0 +1,59 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="B_lvqvhUFEe_xOkRAkU1">
+    <mxGraphModel dx="658" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ocna1uKVjsFABZbygN6R-3" value="&lt;h1 style=&quot;margin-top: 0px; font-size: 40px;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LLM Tests&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Objetivo principal: demonstrar que as RAGs, construídas utilizando as LLMs atuais, e sob o objetivo de prover privacidade em algum nível, não conseguem cumprir a tarefa de forma satisfatória a menos que sejam implementados guard-rails a nível de arquitetura.&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Como? Utilizar técnicas de prompt injection para &quot;quebrar&quot; o sigilo da LLM.&lt;/font&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="10" width="690" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#76608a;strokeColor=#432D57;" edge="1" parent="1" source="Ocna1uKVjsFABZbygN6R-4" target="Ocna1uKVjsFABZbygN6R-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-4" value="1. Estruturar e inserir documentos na base de conhecimento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="50" y="260" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#76608a;strokeColor=#432D57;" edge="1" parent="1" source="Ocna1uKVjsFABZbygN6R-5" target="Ocna1uKVjsFABZbygN6R-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-5" value="2. Inserir instruções para a RAG (Você é um agente... não pode fornecer dados que tenham as tags XPTO, etc)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#76608a;strokeColor=#432D57;" edge="1" parent="1" source="Ocna1uKVjsFABZbygN6R-7" target="Ocna1uKVjsFABZbygN6R-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="430" />
+              <mxPoint x="150" y="430" />
+              <mxPoint x="150" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-7" value="3. Testes iniciais demonstrando que a LLM não fornece dados confidenciais" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="600" y="260" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-9" value="4. Explorar diferentes modelos (Llama, Mistral, GPTs, Geminis)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="460" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-17" value="5. Realizar fine-tuning de modelos existentes com o objetivo de incorporar o conhecimento das KBs (Knowledge Bases) e tentar barrar o acesso aos dados por meio do fine tuning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="325" y="460" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-21" value="6. Considerar diferentes arquiteturas de RAG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="600" y="460" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-22" value="7. Sumarizar resultados, escrever o que foi feito, avaliar novos modelos que surgiram no meio do caminho" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="50" y="660" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-25" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="1090" as="sourcePoint" />
+            <mxPoint x="830" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ocna1uKVjsFABZbygN6R-30" value="&lt;h1 style=&quot;margin-top: 0px; font-size: 40px;&quot;&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1. Documentos&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Objetivo principal: estruturar e inserir documentos na base de conhecimento.&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 17px;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Como?&lt;/font&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="900" y="20" width="690" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

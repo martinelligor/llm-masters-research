@@ -10,7 +10,7 @@ from redis import Redis
 
 
 MODELS = {
-    'OpenAI GPT-4o': 'gpt-4o'
+    'OpenAI GPT-4o': 'gpt-4o-mini'
 }
 
 
@@ -113,7 +113,7 @@ def chat(user_question, chat_id):
 
         def llm_stream(messages):
             response = requests.post(
-                url="http://localhost:8000/get_answer",
+                url="http://localhost:8099/get_answer",
                 json={
                     "question": prompt,
                     "kb_id": "llm-research",
@@ -133,7 +133,6 @@ def chat(user_question, chat_id):
         st.session_state[chat_id].append({"content": f"{response_message['answer']}", "role": "assistant"})
 
         return response_message['answer']
-
 
 
 if __name__ == "__main__":
