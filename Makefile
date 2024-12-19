@@ -41,6 +41,10 @@ deploy-docker:
 delete-docker:
 	docker compose down
 
+.PHONY: deploy-redis
+deploy-redis:
+	docker run -d --name redis-llm -p 6379:6379  redis/redis-stack-server:latest
+
 .PHONY: run-streamlit
 run-streamlit:
 	streamlit run ${PWD}/streamlit/chat.py

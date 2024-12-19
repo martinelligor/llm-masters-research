@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from fastapi import FastAPI, Request, HTTPException
 
-from llm_api.vector_store.redis import RedisVS
+from llm_api.vector_store.redis_vs import RedisVS
 from llm_api.readers.reader import GlobalReader
 from llm_api.utils.healthcheck import healthcheck
 from llm_api.adapters.llama_index import setup_llama_index
@@ -37,8 +37,8 @@ class GetAnswerInput(BaseModel):
 
 @app.post("/get_answer")
 def get_answer(answer_input: GetAnswerInput, request: Request):
-    model = 'gpt-4o-mini'
     headers = request.headers
+    model = answer_input.model if answer_input.model else "gpt-4o-mini"
 
     kb_ids = answer_input.kb_id if isinstance(answer_input.kb_id, list) else [answer_input.kb_id]
 
@@ -68,7 +68,7 @@ class InsertKBInput(BaseModel):
 
 @app.post("/insert_kb")
 def insert_kb(insert_kb_input: InsertKBInput, request: Request):
-    setup_llama_index()
+    setup_llama_index(model='gpt-4o-mini')
 
     # Make sure credentials.json file exists in the current directory (data_connectors)
     reader = GlobalReader()
@@ -87,7 +87,7 @@ class RemoveKBInput(BaseModel):
 
 @app.post("/remove_kb")
 def remove_kb(remove_kb_input: RemoveKBInput, request: Request):
-    setup_llama_index()
+    setup_llama_index(model='gpt-4o-mini')
 
     redis_vs = RedisVS(vs_name=remove_kb_input.kb_id)
     redis_vs.remove_database()

@@ -26,7 +26,7 @@ from llama_index.core.vector_stores.utils import (
     metadata_dict_to_node,
     node_to_metadata_dict,
 )
-from llm_api.vector_store.schema import (
+from llama_index.vector_stores.redis.schema import (
     NODE_ID_FIELD_NAME,
     NODE_CONTENT_FIELD_NAME,
     DOC_ID_FIELD_NAME,
@@ -34,7 +34,7 @@ from llm_api.vector_store.schema import (
     VECTOR_FIELD_NAME,
     RedisVectorStoreSchema,
 )
-from llm_api.vector_store.utils import REDIS_LLAMA_FIELD_SPEC
+from llama_index.vector_stores.redis.utils import REDIS_LLAMA_FIELD_SPEC
 
 from redis import Redis
 from redis.exceptions import RedisError

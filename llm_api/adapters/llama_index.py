@@ -1,23 +1,21 @@
-import os
-
 from llama_index.core import Settings
-from llama_index.llms.openai import OpenAI
-from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.llms.litellm import LiteLLM
+from llama_index.embeddings.litellm import LiteLLMEmbedding
 
 
-def setup_llama_index(model: str = 'gpt-4o-mini', embedd_model: str = 'text-embedding-3-small') -> None:
+def setup_llama_index(model: str, embedd_model: str = 'text-embedding-3-small') -> None:
     # defining a LLM for Llama-index, here we'll use OpenAI
-    llm = OpenAI(
+    print(f'\n\n\n {model} \n\n\n')
+
+    llm = LiteLLM(
         temperature=0.9,
         model=model,
-        api_key=os.getenv("OPENAI_API_KEY"),
     )
 
     # setting the default llm as the llm defined above
     Settings.llm = llm
 
     # setting a default embedding model.
-    Settings.embed_model = OpenAIEmbedding(
-        model=embedd_model,
-        api_key=os.getenv("OPENAI_API_KEY")
+    Settings.embed_model = LiteLLMEmbedding(
+        model_name=embedd_model,
     )

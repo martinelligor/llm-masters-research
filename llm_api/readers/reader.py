@@ -17,7 +17,6 @@ from llama_index.readers.file import (
     CSVReader,
 )
 from llama_index.core.schema import Document
-from llama_index.readers.json import JSONReader
 from llama_index.core.readers import SimpleDirectoryReader
 
 
@@ -43,14 +42,13 @@ class GlobalReader(BaseReader):
             "xml": XMLReader(),
             "paged_csv": PagedCSVReader(),
             "csv": CSVReader(),
-            "json": JSONReader()
         }
 
     def parse(self) -> list[Document]:
         """Parse JSON document into Python dict"""
 
         cwd = os.getcwd()
-        loader = SimpleDirectoryReader(f'{cwd}/src/data/', file_extractor=self.parsers)
+        loader = SimpleDirectoryReader(f'{cwd}/data/', file_extractor=self.parsers)
         llama_index_documents = loader.load_data()
 
         for doc in llama_index_documents:
