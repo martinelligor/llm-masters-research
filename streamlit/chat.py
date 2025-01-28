@@ -10,7 +10,8 @@ from redis import Redis
 
 
 MODELS = {
-    'OpenAI GPT-4o': 'gpt-4o-mini',
+    'OpenAI GPT-4o': 'gpt-4o',
+    'OpenAI GPT-4o-mini': 'gpt-4o-mini',
     'Claude 3 Haiku': 'claude-3-haiku-20240307',
     'Claude 3 Opus': 'claude-3-opus-20240229',
     'Claude 3 Sonnet': 'claude-3-sonnet-20240229',
