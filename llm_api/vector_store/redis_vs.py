@@ -16,9 +16,14 @@ from llama_index.core.ingestion import (
     IngestionCache,
 )
 
+
+
+from llama_index.core.schema import TextNode
+from llama_index.core.base.llms.base import BaseLLM
 from llama_index.core.chat_engine.types import ChatMode
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core import Document, Settings, VectorStoreIndex
+from llama_index.core.base.embeddings.base import BaseEmbedding
+from llama_index.core import Document, Settings, VectorStoreIndex, StorageContext
 
 
 from llm_api.vector_store.redis import RedisVectorStore
@@ -29,7 +34,10 @@ from llm_api.vector_store.memory.chat_memmory_buffer import ChatMemoryBuffer
 
 
 class RedisVS:
-    def __init__(self, vs_name: str, model: str = 'gpt-4o-mini', decode_responses: bool = False) -> None:
+    def __init__(
+            self,
+            vs_name: str,
+            decode_responses: bool = False) -> None:
 
         if not vs_name:
             raise ValueError("Vector store name is required")
@@ -37,7 +45,8 @@ class RedisVS:
         # setting up vector store settings
         self.index_name = vs_name
         self.vector_dimensions = 1536
-        self.model = model
+        self.model = Settings.llm
+        self.embedding = Settings.embed_model
 
         # building connection
         self.client = Redis(
@@ -163,16 +172,23 @@ class RedisVS:
 
     def chat(
             self,
+            similarity_top_k: int,
+            filters=None,
             thread_id: str | None = None,
-            chat_mode: ChatMode = ChatMode.CONTEXT) -> tuple[RedisVectorStore, str]:
+            chat_mode: ChatMode = ChatMode.CONDENSE_PLUS_CONTEXT) -> tuple[RedisVectorStore, str]:
 
         vector_store = self.__get_vector_store
         thread = self.__get_chat_memory_buffer(thread_id=thread_id)
 
+        from llama_index.core.postprocessor import SimilarityPostprocessor
+
         chat_engine = vector_store.as_chat_engine(
-            chat_mode=chat_mode,
             memory=thread,
-            system_prompt=SYSTEM_PROMPT
+            filters=filters,
+            chat_mode=chat_mode,
+            system_prompt=SYSTEM_PROMPT,
+            similarity_top_k=similarity_top_k,
+            node_postprocessors=[SimilarityPostprocessor(similarity_cutoff=0.5)]
         )
 
         return chat_engine, thread.chat_store_key
@@ -224,3 +240,14 @@ class RedisVS:
 
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"LLM RAG API: Error inserting KB ({str(e)})")
+
+    def insert_nodes(self, nodes: list[TextNode]):
+        # create the vector store wrapper
+        vector_store = self.__build_vector_store
+        # load storage context
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
+
+        # build and load index from documents and storage context
+        vector_index = VectorStoreIndex(nodes=nodes, storage_context=storage_context, embed_model=self.embedding)
+
+        return vector_index

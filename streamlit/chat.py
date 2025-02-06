@@ -127,7 +127,7 @@ def chat(model, user_question, chat_id):
                     "question": prompt,
                     "model": model,
                     "kb_id": "llm_research",
-                    "get_vs_used_files": "true",
+                    "get_references": "true",
                     "thread_id": chat_id
                 }
             )
@@ -139,7 +139,8 @@ def chat(model, user_question, chat_id):
             chat_box = st.empty()
             response_message = llm_stream()
             print(response_message)
-            chat_box.write(response_message['answer'])
+            chat_box.write(f'{response_message["answer"]}\n\n**References:**\n')
+            st.json(response_message["references"])
 
         st.session_state[chat_id].append({"content": f"{response_message['answer']}", "role": "assistant"})
 

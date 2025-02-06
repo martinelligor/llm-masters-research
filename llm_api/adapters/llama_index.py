@@ -3,7 +3,7 @@ from llama_index.llms.litellm import LiteLLM
 from llama_index.embeddings.litellm import LiteLLMEmbedding
 
 
-def setup_llama_index(model: str, embedd_model: str = 'text-embedding-3-small') -> None:
+def setup_llama_index(model: str = 'gpt-4o-mini', embedd_model: str = 'text-embedding-3-small') -> None:
     # defining a LLM for Llama-index, here we'll use OpenAI
     print(f'\n\n\n {model} \n\n\n')
 

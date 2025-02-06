@@ -1,4 +1,5 @@
 import os
+import glob
 
 from llm_api.readers.base_reader import BaseReader
 from llama_index.readers.file import (
@@ -47,8 +48,10 @@ class GlobalReader(BaseReader):
     def parse(self) -> list[Document]:
         """Parse JSON document into Python dict"""
 
-        cwd = os.getcwd()
-        loader = SimpleDirectoryReader(f'{cwd}/data/', file_extractor=self.parsers)
+        folder = f'{os.getcwd()}/research-handbook/content/handbook'
+        files = glob.glob(os.path.join(folder, '**', '*.md'), recursive=True)
+
+        loader = SimpleDirectoryReader(input_files=files, file_extractor=self.parsers)
         llama_index_documents = loader.load_data()
 
         for doc in llama_index_documents:
