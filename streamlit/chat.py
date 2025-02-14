@@ -26,6 +26,8 @@ MODELS = {
 def initialize_chat():
     st.sidebar.title("🔬 LLM Research Chat 🔬")
     llm_name = select_model()
+    system_prompt = select_system_prompt()
+    filter_sensitive_data = select_sensitive_data()
 
     if not llm_name:
         st.stop()
@@ -37,7 +39,34 @@ def initialize_chat():
 
     prompt = st.chat_input(f"Ask '{llm_name}' a question ...")
 
-    return prompt, chat_id, MODELS.get(llm_name)
+    return prompt, chat_id, MODELS.get(llm_name), filter_sensitive_data, system_prompt
+
+
+def select_model():
+    model_names = [model for model in MODELS.keys()]
+
+    llm_name = st.sidebar.selectbox(
+        f"Choose Agent (available {len(MODELS)})", [""] + model_names)
+
+    if llm_name:
+        return llm_name
+
+
+def select_system_prompt():
+    system_prompt = st.sidebar.selectbox(
+        "Choose System Prompt",
+        ["SYSTEM_PROMPT_1", "SYSTEM_PROMPT_2", "SYSTEM_PROMPT_3"]
+    )
+
+    return system_prompt
+
+
+def select_sensitive_data():
+    sensitive_data = st.sidebar.checkbox("Filter sensitive data", value=False)
+
+    if sensitive_data:
+        return "True"
+    return "False"
 
 
 def clear_chat(chat_id):
@@ -66,16 +95,6 @@ def print_chat_history_timeline(chat_history_key):
                 st.markdown(message["content"], unsafe_allow_html=True)
 
 
-def select_model():
-    model_names = [model for model in MODELS.keys()]
-
-    llm_name = st.sidebar.selectbox(
-        f"Choose Agent (available {len(MODELS)})", [""] + model_names)
-
-    if llm_name:
-        return llm_name
-
-
 def save_conversation(chat_id):
     OUTPUT_DIR = "llm_conversations"
     OUTPUT_DIR = os.path.join(os.getcwd(), OUTPUT_DIR)
@@ -94,22 +113,11 @@ def save_conversation(chat_id):
             st.success(f"Conversation saved to {filename}.json")
 
 
-def chat(model, user_question, chat_id):
+def chat(model, user_question, chat_id, filter_sensitive_data, system_prompt):
     print_chat_history_timeline(chat_id)
 
     # run the model
     if user_question:
-        # st.session_state[chat_id].append({
-        #     "content": """
-        #         You are an intelligent assistant that helps users in a support channel.
-        #         Analyze the question to identify key concepts and keywords.
-        #         Always use you knowledge base to answer the question.
-        #         Synthesize the retrieved information into a concise and easy-to-understand response.
-        #         Maintain a friendly and professional tone in interactions, using simple and
-        #         accessible language.""",
-        #     "role": "assistant"
-        # })
-
         prompt = user_question
         st.session_state[chat_id].append({"content": f"{prompt}", "role": "user"})
         with st.chat_message("question", avatar="🧑‍🚀"):
@@ -126,6 +134,8 @@ def chat(model, user_question, chat_id):
                 json={
                     "question": prompt,
                     "model": model,
+                    "filter_sensitive_data": filter_sensitive_data,
+                    "system_prompt": system_prompt,
                     "kb_id": "llm_research",
                     "get_references": "true",
                     "thread_id": chat_id
@@ -140,19 +150,20 @@ def chat(model, user_question, chat_id):
             response_message = llm_stream()
             print(response_message)
             chat_box.write(f'{response_message["answer"]}\n\n**References:**\n')
-            st.json(response_message["references"])
+            st.json(response_message["references"], expanded=False)
 
-        st.session_state[chat_id].append({"content": f"{response_message['answer']}", "role": "assistant"})
+        st.session_state[chat_id].append(
+            {"content": f"{response_message['answer']}", "role": "assistant"})
 
         return response_message['answer']
 
 
 if __name__ == "__main__":
-    prompt, chat_id, model = initialize_chat()
+    prompt, chat_id, model, filter_sensitive_data, system_prompt = initialize_chat()
 
     knowledge_base = {}
     if prompt and len(prompt) > 0:
-        chat(model, prompt, chat_id)
+        chat(model, prompt, chat_id, filter_sensitive_data, system_prompt)
 
     if st.session_state[chat_id]:
         clear_conversation = st.sidebar.button("Clear chat")

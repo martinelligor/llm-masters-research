@@ -1,3 +1,5 @@
+import os
+import yaml
 import logging
 
 from http import HTTPStatus
@@ -12,11 +14,11 @@ from llama_index.core.schema import TextNode
 from llama_index.core.node_parser import SemanticSplitterNodeParser
 from llama_index.core.vector_stores import MetadataFilter, MetadataFilters
 
-from llm_api.vector_store.redis_vs import RedisVS
 from llm_api.readers.reader import GlobalReader
 from llm_api.utils.healthcheck import healthcheck
+from llm_api.vector_store.redis_vs import RedisVS
+from llm_api.utils.prompt import SYSTEM_PROMPT_DEFAULT
 from llm_api.adapters.llama_index import setup_llama_index
-
 
 app = FastAPI()
 logger = logging.getLogger("app")
@@ -39,8 +41,9 @@ class GetAnswerInput(BaseModel):
     model: Optional[str] = None
     kb_id: Union[str, List[str]]
     thread_id: Optional[str] = None
+    system_prompt: Optional[str] = None
     get_references: Optional[bool] = False
-    filters: Optional[List[MetadataFilter]] = None
+    filter_sensitive_data: Optional[str] = "False"
 
 
 def process_metadata_filters(filters):
@@ -58,18 +61,30 @@ def process_metadata_filters(filters):
 
 @app.post("/get_answer")
 def get_answer(answer_input: GetAnswerInput, request: Request):
-    top_k = answer_input.top_k if answer_input.top_k else 7
+    top_k = answer_input.top_k if answer_input.top_k else 10
     model = answer_input.model if answer_input.model else "gpt-4o-mini"
     kb_ids = answer_input.kb_id if isinstance(answer_input.kb_id, list) else [answer_input.kb_id]
+    system_prompt = answer_input.system_prompt if answer_input.system_prompt else SYSTEM_PROMPT_DEFAULT
 
     # setting up llm
     setup_llama_index(model=model)
 
-    # getting filters
-    filters = process_metadata_filters(answer_input.filters) if answer_input.filters else None
+    # filtering sensitive info
+    if answer_input.filter_sensitive_data == "True":
+        # if sensitive_data_filter is true, then we need to only provide non-sensitive data
+        sensitive_data_filter = [
+            MetadataFilter(
+                key="sensitive_data",
+                value="False",
+                operator="==",
+            )
+        ]
+        filters = process_metadata_filters(sensitive_data_filter)
+    else:
+        filters = None
 
     # loading vector_stores
-    redis_vs = RedisVS(vs_name=kb_ids[0])
+    redis_vs = RedisVS(vs_name=kb_ids[0], system_prompt=system_prompt)
     chat_engine, thread_id = redis_vs.chat(
         filters=filters,
         similarity_top_k=top_k,
@@ -162,6 +177,7 @@ def _update_node_text_references(nodes: List[TextNode]) -> List[TextNode]:
 
         node.metadata.update(
             {
+                "filename": f"{node.metadata.get('file_name', '')}",
                 "ref_lines": f"{ref_line_per_doc[current_doc]}-{ref_line_per_doc[current_doc]+count}",
                 "text_len": f"{text_len}",
                 "node_start": f"[...] {' '.join(words[:10])} [...]",
@@ -174,8 +190,19 @@ def _update_node_text_references(nodes: List[TextNode]) -> List[TextNode]:
     return nodes
 
 
-def assign_pii_metadata(nodes: List[TextNode]):
-    pass
+def assign_sensitive_info(nodes: List[TextNode]) -> List[TextNode]:
+    with open(f"{os.getcwd()}/sensitive_data_files.yaml", "r") as f:
+        sensitive_data_files = yaml.safe_load(f)
+
+    for node in nodes:
+        filename = node.metadata.get("file_name", "")
+
+        if filename in sensitive_data_files:
+            node.metadata.update({"sensitive_data": "True"})
+        else:
+            node.metadata.update({"sensitive_data": "False"})
+
+    return nodes
 
 
 @app.post("/insert_nodes")
@@ -199,8 +226,8 @@ def insert_nodes(insert_nodes_input: InsertNodesInput, request: Request):
     # getting documents nodes
     nodes = semantic_splitter.get_nodes_from_documents(llama_index_documents)
     nodes = _update_node_text_references(nodes)
-
-    assign_pii_metadata(nodes)
+    # inserting pii metadata information
+    nodes = assign_sensitive_info(nodes)
 
     text_nodes = []
     try:

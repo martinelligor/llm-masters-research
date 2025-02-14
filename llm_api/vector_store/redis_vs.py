@@ -3,26 +3,24 @@ import json
 
 from uuid import uuid4
 from redis import Redis
-from typing import List
+from typing import List, Optional
 from fastapi import HTTPException
 from redisvl.schema import IndexSchema
 from redis.exceptions import ResponseError
-from llm_api.utils.prompt import SYSTEM_PROMPT
-
 from litellm import encode as litellm_encode
+from llm_api.utils.prompt import SYSTEM_PROMPT_DEFAULT
+
+
 from llama_index.core.ingestion import (
     DocstoreStrategy,
     IngestionPipeline,
     IngestionCache,
 )
 
-
-
 from llama_index.core.schema import TextNode
-from llama_index.core.base.llms.base import BaseLLM
 from llama_index.core.chat_engine.types import ChatMode
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core.base.embeddings.base import BaseEmbedding
+from llama_index.core.postprocessor import SimilarityPostprocessor
 from llama_index.core import Document, Settings, VectorStoreIndex, StorageContext
 
 
@@ -37,6 +35,7 @@ class RedisVS:
     def __init__(
             self,
             vs_name: str,
+            system_prompt: Optional[str] = None,
             decode_responses: bool = False) -> None:
 
         if not vs_name:
@@ -46,6 +45,7 @@ class RedisVS:
         self.index_name = vs_name
         self.vector_dimensions = 1536
         self.model = Settings.llm
+        self.system_prompt = system_prompt if system_prompt else SYSTEM_PROMPT_DEFAULT
         self.embedding = Settings.embed_model
 
         # building connection
@@ -62,7 +62,7 @@ class RedisVS:
     @property
     def __make_custom_schema(self) -> IndexSchema:
         custom_schema = IndexSchema.from_dict({
-            "index": {"name": self.index_name, "prefix": self.index_name},
+            "index": {"name": self.index_name, "prefix": self.index_name, "storage_type": "hash"},
             # customize fields that are indexed
             "fields": [
                 # required fields for llamaindex
@@ -70,6 +70,8 @@ class RedisVS:
                 {"type": "tag", "name": "doc_id"},
                 {"type": "text", "name": "text"},
                 # custom vector field for bge-small-en-v1.5 embeddings
+                {"type": "text", "name": "filename"},
+                {"type": "tag", "name": "sensitive_data"},
                 {
                     "type": "vector",
                     "name": "vector",
@@ -175,20 +177,18 @@ class RedisVS:
             similarity_top_k: int,
             filters=None,
             thread_id: str | None = None,
-            chat_mode: ChatMode = ChatMode.CONDENSE_PLUS_CONTEXT) -> tuple[RedisVectorStore, str]:
+            chat_mode: ChatMode = ChatMode.CONTEXT) -> tuple[RedisVectorStore, str]:
 
         vector_store = self.__get_vector_store
         thread = self.__get_chat_memory_buffer(thread_id=thread_id)
-
-        from llama_index.core.postprocessor import SimilarityPostprocessor
 
         chat_engine = vector_store.as_chat_engine(
             memory=thread,
             filters=filters,
             chat_mode=chat_mode,
-            system_prompt=SYSTEM_PROMPT,
+            system_prompt=self.system_prompt,
             similarity_top_k=similarity_top_k,
-            node_postprocessors=[SimilarityPostprocessor(similarity_cutoff=0.5)]
+            node_postprocessors=[SimilarityPostprocessor(similarity_cutoff=0.15)]
         )
 
         return chat_engine, thread.chat_store_key
@@ -232,22 +232,25 @@ class RedisVS:
                 nodes = self.run_pipeline_with_debug(pipeline=pipeline, documents=documents)
             else:
                 for document in documents:
-                    document.text = document.text.encode('utf-8').decode('utf-8').replace('\"', '\'')
+                    document.text = document.text.encode(
+                        'utf-8').decode('utf-8').replace('\"', '\'')
 
                 nodes = pipeline.run(documents=documents)
 
             return nodes
 
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"LLM RAG API: Error inserting KB ({str(e)})")
+            raise HTTPException(
+                status_code=500, detail=f"LLM RAG API: Error inserting KB ({str(e)})")
 
     def insert_nodes(self, nodes: list[TextNode]):
         # create the vector store wrapper
-        vector_store = self.__build_vector_store
+        vector_store = self.vector_store
         # load storage context
         storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
         # build and load index from documents and storage context
-        vector_index = VectorStoreIndex(nodes=nodes, storage_context=storage_context, embed_model=self.embedding)
+        vector_index = VectorStoreIndex(
+            nodes=nodes, storage_context=storage_context, embed_model=self.embedding)
 
         return vector_index
