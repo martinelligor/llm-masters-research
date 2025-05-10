@@ -168,3 +168,5 @@ llm_conversations/*
 
 data/*
 research-handbook/*
+
+.DS_Store

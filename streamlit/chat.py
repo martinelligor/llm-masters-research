@@ -7,10 +7,11 @@ import datetime
 import streamlit as st
 
 from redis import Redis
-
+from llm_api.utils.prompt import SYSTEM_PROMPT_1, SYSTEM_PROMPT_2, SYSTEM_PROMPT_3
 
 MODELS = {
     'OpenAI GPT-4o': 'gpt-4o',
+    'Fine-Tuned GPT-4o-mini': 'ft:gpt-4o-mini-2024-07-18:personal::BK1CWj1i',
     'OpenAI GPT-4o-mini': 'gpt-4o-mini',
     'Claude 3 Haiku': 'claude-3-haiku-20240307',
     'Claude 3 Opus': 'claude-3-opus-20240229',
@@ -58,7 +59,12 @@ def select_system_prompt():
         ["SYSTEM_PROMPT_1", "SYSTEM_PROMPT_2", "SYSTEM_PROMPT_3"]
     )
 
-    return system_prompt
+    if system_prompt == "SYSTEM_PROMPT_1":
+        return SYSTEM_PROMPT_1
+    elif system_prompt == "SYSTEM_PROMPT_2":
+        return SYSTEM_PROMPT_2
+
+    return SYSTEM_PROMPT_3
 
 
 def select_sensitive_data():
@@ -82,7 +88,7 @@ def clear_chat(chat_id):
 
 
 def print_chat_history_timeline(chat_history_key):
-    for message in st.session_state[chat_history_key][1:]:
+    for message in st.session_state[chat_history_key]:
         role = message["role"]
 
         if role == "user":
@@ -148,13 +154,13 @@ def chat(model, user_question, chat_id, filter_sensitive_data, system_prompt):
         with st.chat_message("response", avatar="🤖"):
             chat_box = st.empty()
             response_message = llm_stream()
-            print(response_message)
             chat_box.write(f'{response_message["answer"]}\n\n**References:**\n')
             st.json(response_message["references"], expanded=False)
 
         st.session_state[chat_id].append(
             {"content": f"{response_message['answer']}", "role": "assistant"})
 
+        print(st.session_state[chat_id])
         return response_message['answer']
 
 
