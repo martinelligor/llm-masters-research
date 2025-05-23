@@ -2,6 +2,7 @@
 
 import os
 import json
+import time
 import requests
 import datetime
 import streamlit as st
@@ -24,11 +25,39 @@ MODELS = {
 }
 
 
+# Sample users with roles
+USERS = {
+    "admin": {"password": "admin123", "role": "admin"},
+    "hr_department": {"password": "hr_dept123", "role": "hr"},
+    "user": {"password": "user123", "role": "user"},
+}
+
+
+def login():
+    st.title("Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+    login_button = st.button("Login")
+
+    if login_button:
+        user = USERS.get(username)
+        if user and user["password"] == password:
+            st.session_state.logged_in = True
+            st.session_state.username = username
+            st.session_state.role = user["role"]
+            st.success(f"Welcome {username}!")
+
+            time.sleep(1)
+            st.rerun()
+        else:
+            st.error("Invalid credentials")
+
+
 def initialize_chat():
     st.sidebar.title("🔬 LLM Research Chat 🔬")
     llm_name = select_model()
     system_prompt = select_system_prompt()
-    filter_sensitive_data = select_sensitive_data()
 
     if not llm_name:
         st.stop()
@@ -40,14 +69,14 @@ def initialize_chat():
 
     prompt = st.chat_input(f"Ask '{llm_name}' a question ...")
 
-    return prompt, chat_id, MODELS.get(llm_name), filter_sensitive_data, system_prompt
+    return prompt, chat_id, MODELS.get(llm_name), system_prompt
 
 
 def select_model():
     model_names = [model for model in MODELS.keys()]
 
     llm_name = st.sidebar.selectbox(
-        f"Choose Agent (available {len(MODELS)})", [""] + model_names)
+        label=f"Choose Agent (available {len(MODELS)})", options=model_names, index=0)
 
     if llm_name:
         return llm_name
@@ -67,14 +96,6 @@ def select_system_prompt():
     return SYSTEM_PROMPT_3
 
 
-def select_sensitive_data():
-    sensitive_data = st.sidebar.checkbox("Filter sensitive data", value=False)
-
-    if sensitive_data:
-        return "True"
-    return "False"
-
-
 def clear_chat(chat_id):
     redis_client = Redis(
         host=os.getenv("REDIS_HOST"),
@@ -84,7 +105,6 @@ def clear_chat(chat_id):
     redis_client.delete(chat_id)
 
     st.session_state[chat_id] = []
-    st.rerun()
 
 
 def print_chat_history_timeline(chat_history_key):
@@ -119,7 +139,7 @@ def save_conversation(chat_id):
             st.success(f"Conversation saved to {filename}.json")
 
 
-def chat(model, user_question, chat_id, filter_sensitive_data, system_prompt):
+def chat(model, user_question, chat_id, system_prompt):
     print_chat_history_timeline(chat_id)
 
     # run the model
@@ -140,7 +160,7 @@ def chat(model, user_question, chat_id, filter_sensitive_data, system_prompt):
                 json={
                     "question": prompt,
                     "model": model,
-                    "filter_sensitive_data": filter_sensitive_data,
+                    "role": st.session_state.role,
                     "system_prompt": system_prompt,
                     "kb_id": "llm_research",
                     "get_references": "true",
@@ -165,16 +185,36 @@ def chat(model, user_question, chat_id, filter_sensitive_data, system_prompt):
 
 
 if __name__ == "__main__":
-    prompt, chat_id, model, filter_sensitive_data, system_prompt = initialize_chat()
+    if "logged_in" not in st.session_state:
+        st.session_state.logged_in = False
 
-    knowledge_base = {}
-    if prompt and len(prompt) > 0:
-        chat(model, prompt, chat_id, filter_sensitive_data, system_prompt)
+    if not st.session_state.logged_in:
+        login()
 
-    if st.session_state[chat_id]:
-        clear_conversation = st.sidebar.button("Clear chat")
+    if st.session_state.logged_in:
+        prompt, chat_id, model, system_prompt = initialize_chat()
 
-        if clear_conversation:
+        knowledge_base = {}
+        if prompt and len(prompt) > 0:
+            chat(model, prompt, chat_id, system_prompt)
+
+        if st.session_state[chat_id]:
+            clear_conversation = st.sidebar.button("Clear chat")
+
+            if clear_conversation:
+                clear_chat(chat_id)
+                st.rerun()
+
+        save_conversation(chat_id)
+
+        if st.session_state[chat_id]:
+            _ = [st.sidebar.write("") for i in range(43)]
+        else:
+            _ = [st.sidebar.write("") for i in range(50)]
+
+        logout = st.sidebar.button("Logout")
+        if logout:
             clear_chat(chat_id)
-
-    save_conversation(chat_id)
+            st.session_state[chat_id] = []
+            st.session_state.logged_in = False
+            st.rerun()

@@ -38,12 +38,12 @@ async def healthcheck_handler():
 class GetAnswerInput(BaseModel):
     question: str
     top_k: Optional[int] = 5
+    role: Optional[str] = None
     model: Optional[str] = None
     kb_id: Union[str, List[str]]
     thread_id: Optional[str] = None
     system_prompt: Optional[str] = None
     get_references: Optional[bool] = False
-    filter_sensitive_data: Optional[str] = "False"
 
 
 def process_metadata_filters(filters):
@@ -70,7 +70,7 @@ def get_answer(answer_input: GetAnswerInput, request: Request):
     setup_llama_index(model=model)
 
     # filtering sensitive info
-    if answer_input.filter_sensitive_data == "True":
+    if answer_input.role not in ['hr', 'admin']:
         # if sensitive_data_filter is true, then we need to only provide non-sensitive data
         sensitive_data_filter = [
             MetadataFilter(
