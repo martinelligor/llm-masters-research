@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "llm_api" }]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13"
+python = ">=3.10,<3.14"
 litellm = "^1.52.16"
 llama-index = "0.12.2"
 llama-index-core = ">=0.12.0 <0.13.0"
@@ -17,6 +17,9 @@ llama-index-llms-litellm = "^0.3.0"
 redis = "^5.2.0"
 redisvl = "^0.3.6"
 uvicorn = "^0.34.0"
+fastapi = "^0.115.13"
+streamlit = "^1.46.0"
+unstructured = "^0.17.2"
 
 
 [build-system]

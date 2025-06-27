@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3. Remote Work Guidelines on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/remote-work-guidelines/</link>
+    <description>Recent content in 3. Remote Work Guidelines on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/remote-work-guidelines/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.1 Work Environment</title>
+      <link>http://localhost:1313/handbook/remote-work-guidelines/work-environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/remote-work-guidelines/work-environment/</guid>
+      <description>&lt;p&gt;As a remote team, it’s essential to create a dedicated and efficient workspace.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Dedicated Workspace&lt;/strong&gt;: Establish a specific area for work to enhance focus.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ergonomic Setup&lt;/strong&gt;: Use proper equipment to promote health.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Minimize Distractions&lt;/strong&gt;: Reduce noise and interruptions during work hours.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/&#34;&gt;Previous: 3. Remote Work Guidelines&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/working-hours/&#34;&gt;Next: 3.2 Working Hours&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.2 Working Hours</title>
+      <link>http://localhost:1313/handbook/remote-work-guidelines/working-hours/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/remote-work-guidelines/working-hours/</guid>
+      <description>&lt;p&gt;Remote work requires clear expectations regarding working hours.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Core Hours&lt;/strong&gt;: Overlap at least 4 hours with your team’s standard working hours.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Adjust your schedule as needed while keeping the team informed.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Time Tracking&lt;/strong&gt;: Record your working hours accurately if required.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/work-environment/&#34;&gt;Previous: 3.1 Work Environment&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/communication-tools/&#34;&gt;Next: 3.3 Communication Tools&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.3 Communication Tools</title>
+      <link>http://localhost:1313/handbook/remote-work-guidelines/communication-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/remote-work-guidelines/communication-tools/</guid>
+      <description>&lt;p&gt;Effective communication is key in a remote environment.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: For formal and longer communications.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instant Messaging (Slack)&lt;/strong&gt;: For quick, informal interactions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Video Conferencing (Zoom)&lt;/strong&gt;: For meetings and face-to-face discussions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Project Management (Asana)&lt;/strong&gt;: For task assignments and tracking progress.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/working-hours/&#34;&gt;Previous: 3.2 Working Hours&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/meetings/&#34;&gt;Next: 3.4 Meetings&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.4 Meetings</title>
+      <link>http://localhost:1313/handbook/remote-work-guidelines/meetings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/remote-work-guidelines/meetings/</guid>
+      <description>&lt;p&gt;Meetings are vital for keeping teams aligned even when working remotely.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scheduling&lt;/strong&gt;: Use shared calendars and propose times accommodating different time zones.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Preparation&lt;/strong&gt;: Review agendas beforehand and contribute discussion topics.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Participation&lt;/strong&gt;: Engage actively and respectfully.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Follow-Up&lt;/strong&gt;: Distribute meeting minutes and action items.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/communication-tools/&#34;&gt;Previous: 3.3 Communication Tools&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/security/&#34;&gt;Next: 3.5 Security&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.5 Security</title>
+      <link>http://localhost:1313/handbook/remote-work-guidelines/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/remote-work-guidelines/security/</guid>
+      <description>&lt;p&gt;Security is essential when accessing company resources remotely.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;VPN Usage&lt;/strong&gt;: Use a VPN when accessing sensitive company resources.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Device Security&lt;/strong&gt;: Utilize company-approved antivirus software and keep devices updated.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Protection&lt;/strong&gt;: Encrypt confidential data and use secure passwords.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/meetings/&#34;&gt;Previous: 3.4 Meetings&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/communication-standards/&#34;&gt;Next: 4. Communication Standards&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

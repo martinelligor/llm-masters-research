@@ -23,7 +23,8 @@ COPY pyproject.toml /src/
 COPY poetry.lock /src/
 COPY README.md /src/
 COPY llm_api/ /src/llm_api/
-COPY data/ /src/data/
+COPY llmresearch-handbook/ /src/llmresearch-handbook/
+COPY sensitive_data_files.yaml /src/sensitive_data_files.yaml
 
 RUN cd /src && \
     /opt/poetry/bin/poetry install --only main --no-root && \

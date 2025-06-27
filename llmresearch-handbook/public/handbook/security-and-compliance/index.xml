@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8. Security and Compliance on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/security-and-compliance/</link>
+    <description>Recent content in 8. Security and Compliance on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/security-and-compliance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8.1 Data Protection</title>
+      <link>http://localhost:1313/handbook/security-and-compliance/data-protection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/security-and-compliance/data-protection/</guid>
+      <description>&lt;p&gt;Data protection practices ensure the confidentiality and integrity of our information.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Classification&lt;/strong&gt;: Understand the sensitivity of different data types.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Handling Procedures&lt;/strong&gt;: Proper methods for storing and transmitting data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Privacy Laws&lt;/strong&gt;: Comply with GDPR, CCPA, and other regulations.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/&#34;&gt;Previous: 8. Security and Compliance&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/access-control/&#34;&gt;Next: 8.2 Access Control&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>8.2 Access Control</title>
+      <link>http://localhost:1313/handbook/security-and-compliance/access-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/security-and-compliance/access-control/</guid>
+      <description>&lt;p&gt;Access control policies protect our systems and data.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Password Policies&lt;/strong&gt;: Enforce complexity and regular rotation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Account Management&lt;/strong&gt;: Procedures for creating and revoking access.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Remote Access&lt;/strong&gt;: Secure methods for accessing company resources off-site.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/data-protection/&#34;&gt;Previous: 8.1 Data Protection&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/incident-reporting/&#34;&gt;Next: 8.3 Incident Reporting&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>8.3 Incident Reporting</title>
+      <link>http://localhost:1313/handbook/security-and-compliance/incident-reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/security-and-compliance/incident-reporting/</guid>
+      <description>&lt;p&gt;Reporting incidents promptly is critical for security.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Types of Incidents&lt;/strong&gt;: Include security breaches, phishing attempts, and lost devices.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Immediate Actions&lt;/strong&gt;: Steps to take if an incident occurs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reporting Channels&lt;/strong&gt;: Contact details for our IT security team.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/access-control/&#34;&gt;Previous: 8.2 Access Control&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/physical-security/&#34;&gt;Next: 8.4 Physical Security&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>8.4 Physical Security</title>
+      <link>http://localhost:1313/handbook/security-and-compliance/physical-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/security-and-compliance/physical-security/</guid>
+      <description>&lt;p&gt;Physical security measures protect our equipment and facilities.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Device Protection&lt;/strong&gt;: Guidelines for securing laptops and mobile devices.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Office Access&lt;/strong&gt;: Procedures for entering company premises.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Visitor Policy&lt;/strong&gt;: Protocols for hosting guests and contractors.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/security-and-compliance/incident-reporting/&#34;&gt;Previous: 8.3 Incident Reporting&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/&#34;&gt;Next: 9. Legal and Licensing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

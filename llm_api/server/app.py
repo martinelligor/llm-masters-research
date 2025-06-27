@@ -191,7 +191,7 @@ def _update_node_text_references(nodes: List[TextNode]) -> List[TextNode]:
 
 
 def assign_sensitive_info(nodes: List[TextNode]) -> List[TextNode]:
-    with open(f"{os.getcwd()}/sensitive_data_files.yaml", "r") as f:
+    with open(f"{os.getcwd()}src/sensitive_data_files.yaml", "r") as f:
         sensitive_data_files = yaml.safe_load(f)
 
     for node in nodes:

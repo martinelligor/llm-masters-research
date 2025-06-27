@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2. Company Values on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/company-values/</link>
+    <description>Recent content in 2. Company Values on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/company-values/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.1 Transparency</title>
+      <link>http://localhost:1313/handbook/company-values/transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/transparency/</guid>
+      <description>&lt;p&gt;We believe in open communication and complete transparency. By sharing information openly, we build trust among our employees, customers, and partners.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Open Information Sharing&lt;/strong&gt;: Access to company data and decisions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Honest Communication&lt;/strong&gt;: Encouraging frank and respectful dialogue.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accountability&lt;/strong&gt;: Taking responsibility for actions and outcomes.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;For guidelines on transparent communication, see &lt;a href=&#34;http://localhost:1313/handbook/communication-standards/&#34;&gt;Communication Standards&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/&#34;&gt;Previous: Company Values&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/collaboration/&#34;&gt;Next: 2.2 Collaboration&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.2 Collaboration</title>
+      <link>http://localhost:1313/handbook/company-values/collaboration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/collaboration/</guid>
+      <description>&lt;p&gt;We achieve more together.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Teamwork&lt;/strong&gt;: Working effectively across teams and departments.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Shared Goals&lt;/strong&gt;: Aligning individual objectives with the company mission.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Supportive Environment&lt;/strong&gt;: Encouraging and assisting colleagues.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/transparency/&#34;&gt;Previous: 2.1 Transparency&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/innovation/&#34;&gt;Next: 2.3 Innovation&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.3 Innovation</title>
+      <link>http://localhost:1313/handbook/company-values/innovation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/innovation/</guid>
+      <description>&lt;p&gt;We encourage creativity and embrace new ideas.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Creativity&lt;/strong&gt;: Fostering an environment where new ideas are welcomed.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Risk-Taking&lt;/strong&gt;: Supporting calculated risks in pursuit of growth.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Continuous Learning&lt;/strong&gt;: Investing in professional development.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/collaboration/&#34;&gt;Previous: 2.2 Collaboration&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/customer-centricity/&#34;&gt;Next: 2.4 Customer Centricity&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.4 Customer Centricity</title>
+      <link>http://localhost:1313/handbook/company-values/customer-centricity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/customer-centricity/</guid>
+      <description>&lt;p&gt;Our customers are at the heart of everything we do.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Customer Focus&lt;/strong&gt;: Understanding and prioritizing customer needs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Feedback-Driven&lt;/strong&gt;: Constantly improving based on customer feedback.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Long-Term Relationships&lt;/strong&gt;: Building trust and loyalty.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/innovation/&#34;&gt;Previous: 2.3 Innovation&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/integrity/&#34;&gt;Next: 2.5 Integrity&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.5 Integrity</title>
+      <link>http://localhost:1313/handbook/company-values/integrity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/integrity/</guid>
+      <description>&lt;p&gt;We uphold the highest ethical standards in all that we do.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Honesty&lt;/strong&gt;: Being truthful in all interactions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ethical Practices&lt;/strong&gt;: Conducting business with fairness and integrity.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Trustworthiness&lt;/strong&gt;: Being reliable and consistent in actions.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/customer-centricity/&#34;&gt;Previous: 2.4 Customer Centricity&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/inclusivity/&#34;&gt;Next: 2.6 Inclusivity&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.6 Inclusivity</title>
+      <link>http://localhost:1313/handbook/company-values/inclusivity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/inclusivity/</guid>
+      <description>&lt;p&gt;We foster a diverse and inclusive workplace where everyone feels valued.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Equal Opportunity&lt;/strong&gt;: Ensuring fair treatment and access for all.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Diverse Perspectives&lt;/strong&gt;: Embracing different viewpoints and experiences.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Belonging&lt;/strong&gt;: Creating an environment where everyone feels welcome.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/integrity/&#34;&gt;Previous: 2.5 Integrity&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/company-values/excellence/&#34;&gt;Next: 2.7 Excellence&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.7 Excellence</title>
+      <link>http://localhost:1313/handbook/company-values/excellence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/company-values/excellence/</guid>
+      <description>&lt;p&gt;We strive for the highest standards in everything we do.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Continuous Improvement&lt;/strong&gt;: Always seeking ways to do better.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;High Standards&lt;/strong&gt;: Maintaining a commitment to quality.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Results-Driven&lt;/strong&gt;: Focusing on outcomes and impact.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/inclusivity/&#34;&gt;Previous: 2.6 Inclusivity&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/remote-work-guidelines/&#34;&gt;Next: 3. Remote Work Guidelines&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

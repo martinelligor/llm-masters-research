@@ -35,19 +35,27 @@ package:
 
 .PHONY: deploy-docker
 deploy-docker:
-	docker compose up -d --build
+	docker-compose up -d --build
 
 .PHONY: delete-docker
 delete-docker:
-	docker compose down
+	docker-compose down
 
 .PHONY: deploy-redis
 deploy-redis:
 	docker run -d --name redis -p 6379:6379  redis/redis-stack-server:latest
 
+.PHONY: insert-data
+insert-data:
+	 /bin/bash ${PWD}/scripts/insert_data.sh
+
 .PHONY: run-streamlit
 run-streamlit:
 	streamlit run ${PWD}/streamlit/chat.py
 
+.PHONY: sleep
+sleep:
+	sleep 5
+
 .PHONY: run
-run: deploy-docker insert-data run-streamlit
+run: deploy-docker sleep insert-data run-streamlit

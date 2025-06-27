@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4. Communication Standards on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/communication-standards/</link>
+    <description>Recent content in 4. Communication Standards on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/communication-standards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4.1 Asynchronous Communication</title>
+      <link>http://localhost:1313/handbook/communication-standards/asynchronous-communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/communication-standards/asynchronous-communication/</guid>
+      <description>&lt;p&gt;Asynchronous communication supports thoughtful responses and detailed documentation.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Documentation&lt;/strong&gt;: Create detailed documents for complex topics.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Response Time&lt;/strong&gt;: Aim to reply within 24 hours.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clarity&lt;/strong&gt;: Use headings, bullet points, and summaries for clarity.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/communication-standards/&#34;&gt;Previous: 4. Communication Standards&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/communication-standards/synchronous-communication/&#34;&gt;Next: 4.2 Synchronous Communication&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4.2 Synchronous Communication</title>
+      <link>http://localhost:1313/handbook/communication-standards/synchronous-communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/communication-standards/synchronous-communication/</guid>
+      <description>&lt;p&gt;Real-time communication is essential for immediate collaboration.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instant Messaging Etiquette&lt;/strong&gt;: Keep messages concise; use threads for different topics.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Video Calls&lt;/strong&gt;: Test equipment beforehand and mute when not speaking.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Availability Indicators&lt;/strong&gt;: Update your status to reflect your availability.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/communication-standards/asynchronous-communication/&#34;&gt;Previous: 4.1 Asynchronous Communication&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/communication-standards/communication-etiquette/&#34;&gt;Next: 4.3 Communication Etiquette&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4.3 Communication Etiquette</title>
+      <link>http://localhost:1313/handbook/communication-standards/communication-etiquette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/communication-standards/communication-etiquette/</guid>
+      <description>&lt;p&gt;Maintaining professional communication is critical.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Professional Language&lt;/strong&gt;: Use clear, formal language.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Feedback&lt;/strong&gt;: Use “I” statements and focus on behaviors rather than personalities.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conflict Resolution&lt;/strong&gt;: Address issues directly and seek mutual understanding.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/communication-standards/synchronous-communication/&#34;&gt;Previous: 4.2 Synchronous Communication&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/communication-standards/language-and-inclusivity/&#34;&gt;Next: 4.4 Language and Inclusivity&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4.4 Language and Inclusivity</title>
+      <link>http://localhost:1313/handbook/communication-standards/language-and-inclusivity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/communication-standards/language-and-inclusivity/</guid>
+      <description>&lt;p&gt;Our communication should be inclusive and accessible.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Inclusive Language&lt;/strong&gt;: Use gender-neutral terms and avoid assumptions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cultural Sensitivity&lt;/strong&gt;: Be aware of cultural differences.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Avoid Jargon&lt;/strong&gt;: Use language that is clear to all colleagues.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/communication-standards/communication-etiquette/&#34;&gt;Previous: 4.3 Communication Etiquette&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/&#34;&gt;Next: 5. Onboarding Process&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

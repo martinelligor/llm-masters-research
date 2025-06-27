@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>9. Legal and Licensing on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/legal-and-licensing/</link>
+    <description>Recent content in 9. Legal and Licensing on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/legal-and-licensing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>9.1 Intellectual Property</title>
+      <link>http://localhost:1313/handbook/legal-and-licensing/intellectual-property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/legal-and-licensing/intellectual-property/</guid>
+      <description>&lt;p&gt;Our policies protect both company and employee innovations.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Employee Inventions&lt;/strong&gt;: Rights and responsibilities regarding creations.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Third-Party Materials&lt;/strong&gt;: Proper use and attribution.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Patents and Trademarks&lt;/strong&gt;: Procedures for protecting company IP.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/&#34;&gt;Previous: 9. Legal and Licensing&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/confidentiality-agreements/&#34;&gt;Next: 9.2 Confidentiality Agreements&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>9.2 Confidentiality Agreements</title>
+      <link>http://localhost:1313/handbook/legal-and-licensing/confidentiality-agreements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/legal-and-licensing/confidentiality-agreements/</guid>
+      <description>&lt;p&gt;Confidentiality agreements protect sensitive information.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Non-Disclosure Agreements (NDAs)&lt;/strong&gt;: Requirements and obligations.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Handling&lt;/strong&gt;: Secure management of confidential data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Post-Employment Obligations&lt;/strong&gt;: Responsibilities after departure.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/intellectual-property/&#34;&gt;Previous: 9.1 Intellectual Property&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/compliance-with-laws/&#34;&gt;Next: 9.3 Compliance with Laws&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>9.3 Compliance with Laws</title>
+      <link>http://localhost:1313/handbook/legal-and-licensing/compliance-with-laws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/legal-and-licensing/compliance-with-laws/</guid>
+      <description>&lt;p&gt;We strictly adhere to applicable legal requirements.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Anti-Corruption&lt;/strong&gt;: Policies against bribery and unethical practices.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Export Controls&lt;/strong&gt;: Regulations on international technology transfers.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Insider Trading&lt;/strong&gt;: Prohibition of trading based on non-public information.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/confidentiality-agreements/&#34;&gt;Previous: 9.2 Confidentiality Agreements&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/antitrust-and-fair-competition/&#34;&gt;Next: 9.4 Antitrust and Fair Competition&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>9.4 Antitrust and Fair Competition</title>
+      <link>http://localhost:1313/handbook/legal-and-licensing/antitrust-and-fair-competition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/legal-and-licensing/antitrust-and-fair-competition/</guid>
+      <description>&lt;p&gt;We engage in fair competition while respecting legal boundaries.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fair Dealing&lt;/strong&gt;: Commitment to honest business practices.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collaboration Guidelines&lt;/strong&gt;: Legal parameters for working with competitors.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Market Manipulation&lt;/strong&gt;: Avoid practices that distort market conditions.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/compliance-with-laws/&#34;&gt;Previous: 9.3 Compliance with Laws&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/conclusion/&#34;&gt;Next: 10 Conclusion&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

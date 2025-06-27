@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5. Onboarding Process on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/onboarding-process/</link>
+    <description>Recent content in 5. Onboarding Process on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/onboarding-process/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5.1 First Day</title>
+      <link>http://localhost:1313/handbook/onboarding-process/first-day/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/onboarding-process/first-day/</guid>
+      <description>&lt;p&gt;Your first day sets the tone for your journey with us.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Welcome Orientation&lt;/strong&gt;: Introduction to company culture and values.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;System Access&lt;/strong&gt;: Ensure all accounts and tools are set up.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Policy Agreements&lt;/strong&gt;: Review and acknowledge key policies.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/&#34;&gt;Previous: 5. Onboarding Process&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/first-week/&#34;&gt;Next: 5.2 First Week&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5.2 First Week</title>
+      <link>http://localhost:1313/handbook/onboarding-process/first-week/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/onboarding-process/first-week/</guid>
+      <description>&lt;p&gt;Your first week helps you integrate with your team and understand your role.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Meet Your Team&lt;/strong&gt;: One-on-one meetings with team members.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Training Sessions&lt;/strong&gt;: Complete mandatory compliance and security training.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Initial Tasks&lt;/strong&gt;: Begin introductory projects.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/first-day/&#34;&gt;Previous: 5.1 First Day&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/first-month/&#34;&gt;Next: 5.3 First Month&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5.3 First Month</title>
+      <link>http://localhost:1313/handbook/onboarding-process/first-month/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/onboarding-process/first-month/</guid>
+      <description>&lt;p&gt;The first month is about setting expectations and getting to know the company.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance Goals&lt;/strong&gt;: Establish short-term objectives with your manager.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Feedback Sessions&lt;/strong&gt;: Regular check-ins to discuss progress and questions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Company Familiarity&lt;/strong&gt;: Participate in cross-departmental meetings to understand broader operations.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/first-week/&#34;&gt;Previous: 5.2 First Week&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/probationary-period/&#34;&gt;Next: 5.4 Probationary Period&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5.4 Probationary Period</title>
+      <link>http://localhost:1313/handbook/onboarding-process/probationary-period/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/onboarding-process/probationary-period/</guid>
+      <description>&lt;p&gt;The probationary period is used to evaluate performance and cultural fit.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duration&lt;/strong&gt;: Typically 90 days from the start date.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Evaluation Criteria&lt;/strong&gt;: Performance, cultural fit, and teamwork.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Outcome&lt;/strong&gt;: Confirmation of employment or extension if necessary.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/onboarding-process/first-month/&#34;&gt;Previous: 5.3 First Month&lt;/a&gt; | &lt;a href=&#34;http://localhost:1313/handbook/compensation-and-benefits/&#34;&gt;Next: 6. Compensation and Benefits&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

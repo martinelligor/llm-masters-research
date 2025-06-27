@@ -48,7 +48,7 @@ class GlobalReader(BaseReader):
     def parse(self) -> list[Document]:
         """Parse JSON document into Python dict"""
 
-        folder = f'{os.getcwd()}/research-handbook/content/handbook'
+        folder = f'{os.getcwd()}src/llmresearch-handbook/content/handbook'
         files = glob.glob(os.path.join(folder, '**', '*.md'), recursive=True)
 
         loader = SimpleDirectoryReader(input_files=files, file_extractor=self.parsers)

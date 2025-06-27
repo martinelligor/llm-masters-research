@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Handbooks on MR Corp Handbook</title>
+    <link>http://localhost:1313/handbook/</link>
+    <description>Recent content in Handbooks on MR Corp Handbook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/handbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10. Conclusion</title>
+      <link>http://localhost:1313/handbook/conclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/conclusion/</guid>
+      <description>&lt;p&gt;We are excited to have you as part of the team. This handbook is a living document meant to guide and support you throughout your journey with us. Your feedback is always welcome.&lt;/p&gt;&#xA;&lt;p&gt;Together, we will continue to build a company that values innovation, collaboration, and excellence while fostering an environment where every employee can thrive.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/legal-and-licensing/antitrust-and-fair-competition/&#34;&gt;Previous: 9.4 Antitrust and Fair Competition&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/handbook/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/handbook/introduction/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to &lt;strong&gt;MR Corp&lt;/strong&gt;! We are thrilled to have you join our team. This handbook serves as a comprehensive guide to understanding our company&amp;rsquo;s operations, culture, policies, and procedures.&lt;/p&gt;&#xA;&lt;p&gt;MR Corp is committed to transparency and open communication. This handbook reflects those commitments by providing clear information on what you can expect from the company and what the company expects from you.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/handbook/company-values/&#34;&gt;Next: Company Values&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
