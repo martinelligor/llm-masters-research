@@ -83,26 +83,9 @@ REDIS_PASSWORD=""
 ### Prerequisites
 
 - **Python**: >=3.10,<3.14 (managed via Poetry)
-- **Docker**: For Redis and containerized deployment
+- **Docker**: For Redis and containerized deployment of the REST API
 - **Poetry**: For dependency management
 
-### Development Setup (If )
-
-```bash
-# Install dependencies
-poetry install
-
-# Activate virtual environment
-poetry shell
-
-# Deploy Redis locally
-make deploy-docker
-
-# Insert sample data
-make insert-data
-
-# Run Streamlit interface
-streamlit run streamlit/chat.py
 ```
 
 ### Additional Tools
