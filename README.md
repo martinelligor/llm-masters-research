@@ -9,6 +9,7 @@ This system was designed for research purposes, focusing on RAG implementation, 
 ```bash
 # Install all the dependencies needed for this project
 poetry install
+poetry shell
 ```
 
 ## Quick Start
@@ -85,7 +86,7 @@ REDIS_PASSWORD=""
 - **Docker**: For Redis and containerized deployment
 - **Poetry**: For dependency management
 
-### Development Setup
+### Development Setup (If )
 
 ```bash
 # Install dependencies
@@ -95,7 +96,7 @@ poetry install
 poetry shell
 
 # Deploy Redis locally
-make deploy-redis
+make deploy-docker
 
 # Insert sample data
 make insert-data
