@@ -26,22 +26,6 @@ This command will:
 3. Insert sample data (`make insert-data`)
 4. Launch the Streamlit chat interface (`make run-streamlit`)
 
-## Alternative Running Methods
-
-### Manual Step-by-Step
-```bash
-# 1. Deploy Docker services
-make deploy-docker
-
-# 2. Wait for Redis to be ready
-make sleep
-
-# 3. Insert data into vector store
-make insert-data
-
-# 4. Launch Streamlit interface
-make run-streamlit
-```
 
 ## Project Characteristics
 
